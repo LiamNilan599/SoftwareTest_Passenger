@@ -49,7 +49,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Age must be 16+ to fly");
+            throw new IllegalArgumentException("Age must be 16 or over to fly");
         }
     }
 

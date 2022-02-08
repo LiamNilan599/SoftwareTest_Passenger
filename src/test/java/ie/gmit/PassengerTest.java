@@ -51,8 +51,9 @@ public class PassengerTest
     @Test
     void InvalidNameTest()
     {
-        Passenger pass = new Passenger("Mrs","Sh", "MKV562060b","0879073600",34);
-        assertTrue(pass.GetName().length() < 3);
+        final String invalid ="Name must be 3 characters or more";
+        Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mrs","Sh", "MKV562060b","0879073600",34));
+        assertEquals(invalid, exceptionThrown.getMessage());
     }
 
     @Test

@@ -58,8 +58,9 @@ public class PassengerTest
     @Test
     void InvalidIDTest()
     {
-        Passenger pass = new Passenger("Mrs","Shiela", "MKV56206","0879073600",34);
-        assertEquals(8, pass.GetId().length());
+        final String invalid ="ID must be 10 characters";
+        Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mrs","Shiela", "MKV56206","0879073600",34));
+        assertEquals(invalid, exceptionThrown.getMessage());
     }
 
 

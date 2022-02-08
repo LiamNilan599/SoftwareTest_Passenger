@@ -40,7 +40,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Phone must be 7 characters ");
+            throw new IllegalArgumentException("Phone must be 7 characters");
         }
 
         if (age >= 16)

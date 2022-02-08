@@ -71,4 +71,12 @@ public class PassengerTest
         Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mrs","Shiela", "MKV562060b","0879073600",3));
         assertEquals(invalid, exceptionThrown.getMessage());
     }
+
+    @Test
+    void InvalidPhoneTest()
+    {
+        final String invalid ="Phone must be 7 characters";
+        Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Ms","Shiela", "MKV562060b","08790",34));
+        assertEquals(invalid, exceptionThrown.getMessage());
+    }
 }

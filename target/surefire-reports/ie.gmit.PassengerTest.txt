@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: ie.gmit.PassengerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in ie.gmit.PassengerTest
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.059 s <<< FAILURE! - in ie.gmit.PassengerTest
+ie.gmit.PassengerTest.InvalidIDTest  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalArgumentException: ID must be 10 characters 
+	at ie.gmit.PassengerTest.InvalidIDTest(PassengerTest.java:61)
+
+ie.gmit.PassengerTest.InvalidNameTest  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalArgumentException: Name must be 3 characters or more
+	at ie.gmit.PassengerTest.InvalidNameTest(PassengerTest.java:54)
+

@@ -59,6 +59,15 @@ public class PassengerTest
     void InvalidIDTest()
     {
         Passenger pass = new Passenger("Mrs","Shiela", "MKV56206","0879073600",34);
-        assertEquals(10, pass.GetId().length());
+        assertEquals(8, pass.GetId().length());
+    }
+
+
+    @Test
+    void InvalidAgeTest()
+    {
+        final String invalid ="Age must be 16 or over to fly";
+        Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mrs","Shiela", "MKV562060b","0879073600",3));
+        assertEquals(invalid, exceptionThrown.getMessage());
     }
 }

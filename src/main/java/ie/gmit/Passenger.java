@@ -31,7 +31,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("ID must be 10 characters ");
+            throw new IllegalArgumentException("ID must be 10 characters");
         }
 
         if (Phone.length() >= 7)
